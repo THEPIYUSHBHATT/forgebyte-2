@@ -25,16 +25,16 @@ const Header = () => {
       {/* Desktop Navigation */}
       <ul className="hidden md:flex space-x-8 text-sm font-medium">
         <li>
-          <Link href="#home" className="font-semibold">Home</Link>
+          <Link href="/" className="font-semibold">Home</Link>
         </li>
         <li>
-          <Link href="#about" className="font-semibold">About</Link>
+          <Link href="/about" className="font-semibold">About</Link>
         </li>
         <li>
-          <Link href="#services" className="font-semibold">Services</Link>
+          <Link href="/services" className="font-semibold">Services</Link>
         </li>
         <li>
-          <Link href="#projects" className="font-semibold">Testimonial</Link>
+          <Link href="/projects" className="font-semibold">Testimonial</Link>
         </li>
       </ul>
 

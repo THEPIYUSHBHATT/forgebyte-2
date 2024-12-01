@@ -27,7 +27,7 @@ const services = [
 
 export default function WhatWeAreOffering() {
   return (
-    <section className="bg-black text-white py-16 px-6">
+    <section className="bg-black text-white py-16 px-6 rounded-t-3xl">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-sm font-semibold tracking-wide uppercase text-gray-400 mb-4">
           Services

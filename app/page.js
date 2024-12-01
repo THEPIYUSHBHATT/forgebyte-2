@@ -1,21 +1,180 @@
 "use client";
 
-import Hero from "@/components/Hero";
+import Button from '../components/Button'
+import Image from 'next/image'
+import { FaArrowDown } from 'react-icons/fa'
+import { FaLaptop, FaListAlt, FaCog } from 'react-icons/fa'
 
-import Include from "@/components/Include";
 import WhatWeAreOffering from "@/components/WhatWeAreOffering";
 import LetsTalk from "@/components/LetsTalk";
-import Collaborate from "@/components/Collaborate";
+
 
 export default function Home() {
+  const items = [
+    {
+      icon: <FaLaptop className="text-black mb-4" size={36} />,
+      title: '1 Stunning landing pages',
+      description:
+        'GrowStudio has 1 stunning home pages, designed to build your personal portfolio site in the market.',
+    },
+    {
+      icon: <FaListAlt className="text-black mb-4" size={36} />,
+      title: '10+ Useful inner pages',
+      description:
+        'GrowStudio has 10+ inner pages that is needed for your business, you can fully customize these.',
+    },
+    {
+      icon: <FaCog className="text-black mb-4" size={36} />,
+      title: '30+ Details sections',
+      description:
+        'GrowStudio has 30+ Stunning sections which will help you to build a portfolio website as per your need.',
+    },
+  ]
   return (
     <>
-      <Hero />
-      <Include/>
+      
+
+      {/* -----------------hero component--------------------------- */}
+      <div className="text-center py-12 bg-white">
+        <div className=' my-16'>
+
+          <h1 className="text-black text-7xl font-bold mb-10 font-sans">
+            Digital Marketing Agency <br />
+            Template Design
+          </h1>
+          <p className="text-black text-xs mb-5">
+            ForgeByte webflow template includes 10+ pages in total, with more than
+            40+ <br />
+            sections and 1 home page, and amazing features
+          </p>
+        </div>
+
+
+        <div className="mb-5 my-20 ">
+          <Button className="mt-1" text="Contact Us" />
+
+          <button className="ml-2 py-2 px-4 bg-inherit text-black font-bold rounded inline-flex items-center">
+            Explore <FaArrowDown className="ml-1" />
+          </button>
+        </div>
+
+        {/* images */}
+        <div className="flex justify-center gap-5 mt-8 overflow-x-auto relative">
+          <style>
+            {`
+            .no-scrollbar::-webkit-scrollbar {
+              display: none;
+            }
+            .no-scrollbar {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+            .scroll-container {
+              scroll-snap-type: x mandatory;
+              scroll-behavior: smooth;
+            }
+            .scroll-item {
+              scroll-snap-align: start;
+            }
+          `}
+          </style>
+          <div className="flex space-x-5 overflow-x-auto no-scrollbar scroll-container">
+            <div className="flex-none border border-gray-300 p-5 rounded-lg  transition-transform duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg scroll-item">
+              <Image
+                src="/assets/trexo_updated.png"
+                alt="Trexo Template"
+                width={450}
+                height={350}
+                className="rounded-lg  h-auto"
+              />
+            </div>
+            <div className="flex-none border border-gray-300 p-5 rounded-lg  transition-transform duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg scroll-item">
+              <Image
+                src="/assets/yoom_updated.png"
+                alt="YOOM Template"
+                width={450}
+                height={350}
+                className="rounded-lg  h-auto"
+              />
+            </div>
+            <div className="flex-none border border-gray-300 p-5 rounded-lg  transition-transform duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg scroll-item">
+              <Image
+                src="/assets/fleetr_enhanced.png"
+                alt="Third Template"
+                width={450}
+                height={350}
+                className="rounded-lg h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* -----------------include component--------------------------- */}
+      <div className="bg-white py-5">
+        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center px-6 lg:px-24">
+          <div className="lg:w-1/2 text-left mb-8 lg:mb-0 lg:mt-15">
+            <h2 className="text-black text-7xl font-extrabold mb-1">
+              Included in
+            </h2>
+            <h3 className="text-black text-6xl font-semibold mb-4 ">
+              ForgeByte
+            </h3>
+            <p className="text-black text-lg mb-8">
+              ForgeByte webflow template includes 10+ pages in total,
+              <br /> with more than 40+ sections and 1 different home pages <br />{' '}
+              and amazing features.
+            </p>
+            <Button className="mt-4" text="Purchase Template" />
+          </div>
+          <div className="lg:w-1/2 flex flex-col space-y-4 items-center">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#f9fafb] p-7 rounded-2xl shadow-md text-left transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg w-3/4 sm:w-full"
+              >
+                {item.icon}
+                <h3 className="text-black text-xl font-bold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-black">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* -----------------what we are offering component--------------------------- */}
       <WhatWeAreOffering />
-      <Collaborate />
+
+
+      {/* -----------------collaborate component--------------------------- */}
+      <section className="relative py-20 bg-black">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Exploring Oppurtunities to work with ?
+          </h2>
+          <p className="text-gray-400 mb-8 leading-relaxed">
+            I specialize in creating and implementing strategies that drive online visibility,
+            engagement, and growth for businesses. My expertise spans across various digital
+            platforms, including social media, search engines, and email marketing.
+          </p>
+          <Button text="Contact Me" />
+        </div>
+
+        {/* Gradient Effect */}
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000] to-[#fff] opacity-70 pointer-events-none"></div> */}
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#fff] to-[#00000050] opacity-70 pointer-events-none"></div> */}
+      </section>
+
+
+
+      {/* -----------------lets talk component--------------------------- */}
       <LetsTalk />
-    
+
+
+
+
     </>
   )
 }
