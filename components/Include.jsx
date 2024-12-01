@@ -1,23 +1,27 @@
 'use client'
 import { FaLaptop, FaListAlt, FaCog } from 'react-icons/fa'
+// import DetailsIcon from '../public/assets/details-icon.svg';
+// import StunningIcon from '../public/assets/stunning-icon.svg';
+// import { FaCog } from 'react-icons/fa';
+
 import Button from './Button'
 
 const IncludedinForgeByte = () => {
   const items = [
     {
-      icon: <FaLaptop className="text-blue-500 mb-4" size={36} />,
+      icon: <FaLaptop className="text-black mb-4" size={36} />,
       title: '1 Stunning landing pages',
       description:
         'GrowStudio has 1 stunning home pages, designed to build your personal portfolio site in the market.',
     },
     {
-      icon: <FaListAlt className="text-blue-500 mb-4" size={36} />,
+      icon: <FaListAlt className="text-black mb-4" size={36} />,
       title: '10+ Useful inner pages',
       description:
         'GrowStudio has 10+ inner pages that is needed for your business, you can fully customize these.',
     },
     {
-      icon: <FaCog className="text-blue-500 mb-4" size={36} />,
+      icon: <FaCog className="text-black mb-4" size={36} />,
       title: '30+ Details sections',
       description:
         'GrowStudio has 30+ Stunning sections which will help you to build a portfolio website as per your need.',
@@ -28,10 +32,10 @@ const IncludedinForgeByte = () => {
     <div className="bg-white py-5">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center px-6 lg:px-24">
         <div className="lg:w-1/2 text-left mb-8 lg:mb-0 lg:mt-15">
-          <h2 className="text-black text-5xl font-extrabold mb-1">
+          <h2 className="text-black text-7xl font-extrabold mb-1">
             Included in
           </h2>
-          <h3 className="text-blue-600 text-4xl font-semibold mb-4 ">
+          <h3 className="text-black text-6xl font-semibold mb-4 ">
             ForgeByte
           </h3>
           <p className="text-black text-lg mb-8">
@@ -45,7 +49,7 @@ const IncludedinForgeByte = () => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-100 p-4 rounded-lg shadow-md text-left transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg w-3/4 sm:w-full"
+              className="bg-[#f9fafb] p-7 rounded-2xl shadow-md text-left transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg w-3/4 sm:w-full"
             >
               {item.icon}
               <h3 className="text-black text-xl font-bold mb-2">

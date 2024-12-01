@@ -2,9 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-      <footer>slfkg</footer>
+    <>
+    <div  className='bg-slate-400 h-[400px]'>
+      <footer>adfkgj</footer>
     </div>
+    </>
   )
 }
 
