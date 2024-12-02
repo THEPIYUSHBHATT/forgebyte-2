@@ -11,6 +11,8 @@ module.exports = {
       colors: {
         "gradient-start": "#fbc02d",
         "gradient-end": "#64b5f6",
+        'hero-section' : '#050414',
+        
       },
     },
   },
