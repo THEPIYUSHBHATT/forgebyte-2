@@ -32,22 +32,25 @@ export default function Home() {
   ]
   return (
     <>
-      
+
 
       {/* -----------------hero component--------------------------- */}
       <div className="text-center py-12 bg-white">
-        <div className=' my-16'>
-
-          <h1 className="text-black text-7xl font-bold mb-10 font-sans">
-            Digital Marketing Agency <br />
+        <div className="my-8 px-4 md:my-16 md:px-8">
+          {/* Heading */}
+          <h1 className="text-black text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-10 font-sans leading-tight">
+            Digital Marketing Agency <br className="hidden md:block" />
             Template Design
           </h1>
-          <p className="text-black text-xs mb-5">
-            ForgeByte webflow template includes 10+ pages in total, with more than
-            40+ <br />
-            sections and 1 home page, and amazing features
+
+          {/* Description */}
+          <p className="text-black text-sm md:text-base mb-5 leading-relaxed">
+            ForgeByte webflow template includes 10+ pages in total, with more than 40+
+            <br className="hidden md:block" />
+            sections and 1 home page, and amazing features.
           </p>
         </div>
+
 
 
         <div className="mb-5 my-20 ">
@@ -113,36 +116,42 @@ export default function Home() {
       {/* -----------------include component--------------------------- */}
       <div className="bg-white py-5">
         <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center px-6 lg:px-24">
+          {/* Left Section */}
           <div className="lg:w-1/2 text-left mb-8 lg:mb-0 lg:mt-15">
-            <h2 className="text-black text-7xl font-extrabold mb-1">
+            <h2 className="text-black text-4xl md:text-6xl lg:text-7xl font-extrabold mb-1">
               Included in
             </h2>
-            <h3 className="text-black text-6xl font-semibold mb-4 ">
+            <h3 className="text-black text-3xl md:text-5xl lg:text-6xl font-semibold mb-4">
               ForgeByte
             </h3>
-            <p className="text-black text-lg mb-8">
+            <p className="text-black text-sm md:text-lg mb-8">
               ForgeByte webflow template includes 10+ pages in total,
-              <br /> with more than 40+ sections and 1 different home pages <br />{' '}
+              <br /> with more than 40+ sections and 1 different home pages <br />
               and amazing features.
             </p>
-            <Button className="mt-4" text="Purchase Template" />
+            <div className="flex justify-center lg:justify-start">
+              <Button className="mt-4" text="Purchase Template" />
+            </div>
           </div>
+
+          {/* Right Section */}
           <div className="lg:w-1/2 flex flex-col space-y-4 items-center">
             {items.map((item, index) => (
               <div
                 key={index}
-                className="bg-[#f9fafb] p-7 rounded-2xl shadow-md text-left transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg w-3/4 sm:w-full"
+                className="bg-[#f9fafb] p-5 sm:p-7 rounded-2xl shadow-md text-left transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg w-full sm:w-3/4"
               >
                 {item.icon}
-                <h3 className="text-black text-xl font-bold mb-2">
+                <h3 className="text-black text-lg sm:text-xl font-bold mb-2">
                   {item.title}
                 </h3>
-                <p className="text-black">{item.description}</p>
+                <p className="text-black text-sm sm:text-base">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
+
 
       {/* -----------------what we are offering component--------------------------- */}
       <WhatWeAreOffering />
