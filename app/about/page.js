@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image"
 
 const Page = () => {
@@ -44,17 +46,17 @@ const Page = () => {
   ]
   return (
     <main>
-      <div className="bg-hero-section relative flex flex-col gap-y-10 justify-center items-center h-[600px] rounded-br-[250px] py-10">
+      <div className="bg-hero-section relative flex flex-col gap-y-10 justify-center items-center h-[500px] rounded-br-[250px] py-10">
         <h1 className="flex items-center flex-col justify-center text-8xl font-bold font-sans leading-[116.18px] hero-text-gradient">Journey of Innovation<div>and excellence</div></h1>
         <p className="flex items-center justify-center flex-col font-sans text-xl">From humble beginnings to industry leadership, we have continuously<br /><span>
-        pushed boundaries to deliver innovative solutions</span></p>
+          pushed boundaries to deliver innovative solutions</span></p>
         <div className="bg-[#86d2fc33] h-[35%] absolute w-[20%] blur-[80px] -bottom-10 -right-10"></div>
       </div>
       <div className="text-black flex flex-col justify-start py-10 items-center px-4">
         <p className="text-[rgba(0,0,0,0.5)]">Our Success</p>
         <h1 className="flex items-center flex-col justify-center text-8xl font-bold font-sans leading-[116.18px]">The ultimate of our<br /><span>success over the years</span></h1>
         <div className="flex justify-evenly mt-16 w-full px-8 items-center mb-8">
-          {data.map((item,index)=>(
+          {data.map((item, index) => (
             <div key={index} className="h-[160px] w-[284px] bg-[rgba(244,244,248,1)] rounded-3xl flex flex-col justify-evenly py-5 items-center">
               <div className="text-6xl font-bold">{item.number}</div>
               <div className="text-xl">{item.text}</div>
@@ -67,18 +69,18 @@ const Page = () => {
             <p className="font-semibold text-2xl text-[rgba(0,0,0,0.5)]">Who We Are</p>
             <h1 className="font-bold text-5xl mb-8">About our Company</h1>
             <h4 className="text-2xl">At Forgebyte, we ensure work quality, build a long-term relationship with clients and add more people to our list of happy customers.<br />
-This has always been our main goal.<br />
-In order to achieve this goal, we have managed to provide high-end web, mobile apps, software, and other digital solution development services.<br />
-We build products using the latest technologies that also leave<br /> 
-an impression on the user and keep up their interests.<br />
-Being on the market since 2023, we have gained trust and respect from our clients by providing them unmatchable support and an incredible user experience focused on quality and performance.</h4>
+              This has always been our main goal.<br />
+              In order to achieve this goal, we have managed to provide high-end web, mobile apps, software, and other digital solution development services.<br />
+              We build products using the latest technologies that also leave<br />
+              an impression on the user and keep up their interests.<br />
+              Being on the market since 2023, we have gained trust and respect from our clients by providing them unmatchable support and an incredible user experience focused on quality and performance.</h4>
           </div>
         </div>
         <div className="bg-[#141220] relative h-[544px] w-full mt-10 rounded-tr-[100px] rounded-bl-[100px] flex flex-col items-center">
           <div className="bg-[#86d2fc33] h-[50%] absolute w-[25%] blur-[100px] -top-20 left-[37.5%]"></div>
           <h1 className="text-white font-semibold text-3xl font-sans mt-5">Our Values</h1>
           <div className="flex justify-evenly w-full h-full items-center">
-            {values.map((value, index)=>(
+            {values.map((value, index) => (
               <div key={index} className="w-72 h-72 bg-white rounded-3xl flex justify-evenly p-4 items-center flex-col">
                 <Image src={value.image} alt="as" height={80} width={80} />
                 <h1 className="text-xl font-medium">{value.name}</h1>
@@ -91,19 +93,19 @@ Being on the market since 2023, we have gained trust and respect from our client
       <div className="flex justify-center gap-y-10 items-center flex-col">
         <h1 className="text-black text-7xl font-bold font-sans">Together we combine<br />outstanding team</h1>
         <div className="flex justify-evenly items-center w-full mb-10">
-        <div className="">
-          <Image src={'https://s3-alpha-sig.figma.com/img/63c2/6ee5/a3c0d035abaab3b4c0d2718d59b1eb3a?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=V6piK-isJ~lBJUc2HAj2pfQtZp9berzYbFpnpqajOhvuKfGVuCvhYJJvfbtIR~eczzWKhntkr7VlXLqGpR4O4DeMCJUIUf9df1SdmZyDWEsKf0zLK5ixEAk6IZRmXr5G3EBMBijQ4ulFErfreefpaEXYZ1Ca8gHXLBO9aCG3e7aPxWiOyy7qvX~rHS2HWgX9gCli5QKSN1LYIyzaGuPJSuwSZSksPfYTBUd2NC6XB6RdO86h519KbmD2vp4HmlGKhH6UskGITHAZqVrLKD5sFEbWzJjILHRHqfWIhuxgIu8piS-9xDamGiCRP4OJFgKfYQOu7vpWcCcaR2rLz8vnfg__'} alt="as" height={200} width={200} className="rounded-3xl"/>
-          <h2 className="text-xl font-bold text-black">ABC</h2>
-          <p className="text-gray-500">job</p>
-        </div><div className="">
-          <Image src={'https://s3-alpha-sig.figma.com/img/63c2/6ee5/a3c0d035abaab3b4c0d2718d59b1eb3a?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=V6piK-isJ~lBJUc2HAj2pfQtZp9berzYbFpnpqajOhvuKfGVuCvhYJJvfbtIR~eczzWKhntkr7VlXLqGpR4O4DeMCJUIUf9df1SdmZyDWEsKf0zLK5ixEAk6IZRmXr5G3EBMBijQ4ulFErfreefpaEXYZ1Ca8gHXLBO9aCG3e7aPxWiOyy7qvX~rHS2HWgX9gCli5QKSN1LYIyzaGuPJSuwSZSksPfYTBUd2NC6XB6RdO86h519KbmD2vp4HmlGKhH6UskGITHAZqVrLKD5sFEbWzJjILHRHqfWIhuxgIu8piS-9xDamGiCRP4OJFgKfYQOu7vpWcCcaR2rLz8vnfg__'} alt="as" height={200} width={200} className="rounded-3xl"/>
-          <h2 className="text-xl font-bold text-black">ABC</h2>
-          <p className="text-gray-500">job</p>
-        </div><div className="">
-          <Image src={'https://s3-alpha-sig.figma.com/img/63c2/6ee5/a3c0d035abaab3b4c0d2718d59b1eb3a?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=V6piK-isJ~lBJUc2HAj2pfQtZp9berzYbFpnpqajOhvuKfGVuCvhYJJvfbtIR~eczzWKhntkr7VlXLqGpR4O4DeMCJUIUf9df1SdmZyDWEsKf0zLK5ixEAk6IZRmXr5G3EBMBijQ4ulFErfreefpaEXYZ1Ca8gHXLBO9aCG3e7aPxWiOyy7qvX~rHS2HWgX9gCli5QKSN1LYIyzaGuPJSuwSZSksPfYTBUd2NC6XB6RdO86h519KbmD2vp4HmlGKhH6UskGITHAZqVrLKD5sFEbWzJjILHRHqfWIhuxgIu8piS-9xDamGiCRP4OJFgKfYQOu7vpWcCcaR2rLz8vnfg__'} alt="as" height={200} width={200} className="rounded-3xl"/>
-          <h2 className="text-xl font-bold text-black">ABC</h2>
-          <p className="text-gray-500">job</p>
-        </div>
+          <div className="">
+            <Image src={'https://s3-alpha-sig.figma.com/img/63c2/6ee5/a3c0d035abaab3b4c0d2718d59b1eb3a?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=V6piK-isJ~lBJUc2HAj2pfQtZp9berzYbFpnpqajOhvuKfGVuCvhYJJvfbtIR~eczzWKhntkr7VlXLqGpR4O4DeMCJUIUf9df1SdmZyDWEsKf0zLK5ixEAk6IZRmXr5G3EBMBijQ4ulFErfreefpaEXYZ1Ca8gHXLBO9aCG3e7aPxWiOyy7qvX~rHS2HWgX9gCli5QKSN1LYIyzaGuPJSuwSZSksPfYTBUd2NC6XB6RdO86h519KbmD2vp4HmlGKhH6UskGITHAZqVrLKD5sFEbWzJjILHRHqfWIhuxgIu8piS-9xDamGiCRP4OJFgKfYQOu7vpWcCcaR2rLz8vnfg__'} alt="as" height={200} width={200} className="rounded-3xl" />
+            <h2 className="text-xl font-bold text-black">ABC</h2>
+            <p className="text-gray-500">job</p>
+          </div><div className="">
+            <Image src={'https://s3-alpha-sig.figma.com/img/63c2/6ee5/a3c0d035abaab3b4c0d2718d59b1eb3a?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=V6piK-isJ~lBJUc2HAj2pfQtZp9berzYbFpnpqajOhvuKfGVuCvhYJJvfbtIR~eczzWKhntkr7VlXLqGpR4O4DeMCJUIUf9df1SdmZyDWEsKf0zLK5ixEAk6IZRmXr5G3EBMBijQ4ulFErfreefpaEXYZ1Ca8gHXLBO9aCG3e7aPxWiOyy7qvX~rHS2HWgX9gCli5QKSN1LYIyzaGuPJSuwSZSksPfYTBUd2NC6XB6RdO86h519KbmD2vp4HmlGKhH6UskGITHAZqVrLKD5sFEbWzJjILHRHqfWIhuxgIu8piS-9xDamGiCRP4OJFgKfYQOu7vpWcCcaR2rLz8vnfg__'} alt="as" height={200} width={200} className="rounded-3xl" />
+            <h2 className="text-xl font-bold text-black">ABC</h2>
+            <p className="text-gray-500">job</p>
+          </div><div className="">
+            <Image src={'https://s3-alpha-sig.figma.com/img/63c2/6ee5/a3c0d035abaab3b4c0d2718d59b1eb3a?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=V6piK-isJ~lBJUc2HAj2pfQtZp9berzYbFpnpqajOhvuKfGVuCvhYJJvfbtIR~eczzWKhntkr7VlXLqGpR4O4DeMCJUIUf9df1SdmZyDWEsKf0zLK5ixEAk6IZRmXr5G3EBMBijQ4ulFErfreefpaEXYZ1Ca8gHXLBO9aCG3e7aPxWiOyy7qvX~rHS2HWgX9gCli5QKSN1LYIyzaGuPJSuwSZSksPfYTBUd2NC6XB6RdO86h519KbmD2vp4HmlGKhH6UskGITHAZqVrLKD5sFEbWzJjILHRHqfWIhuxgIu8piS-9xDamGiCRP4OJFgKfYQOu7vpWcCcaR2rLz8vnfg__'} alt="as" height={200} width={200} className="rounded-3xl" />
+            <h2 className="text-xl font-bold text-black">ABC</h2>
+            <p className="text-gray-500">job</p>
+          </div>
         </div>
       </div>
     </main>
