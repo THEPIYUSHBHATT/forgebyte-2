@@ -3,14 +3,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import icons for the hamburger menu
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [path, setPath] = useState('')
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setPath(window.location.pathname)
+    }
+  }, [])
+  
   return (
-    <div className="flex items-center justify-between px-4 md:px-10 border-b-[1px] h-20 w-full bg-[#fff] text-black">
+    <nav className={`flex items-center justify-between px-4 md:px-10 h-20 w-full ${path === '/' ? 'text-black border-b-[1px]':'bg-hero-section text-white'}`}>
       {/* Logo */}
       <div className="flex items-center">
         <Image
@@ -84,7 +91,7 @@ const Header = () => {
           </ul>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 
