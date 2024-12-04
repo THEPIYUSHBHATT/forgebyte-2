@@ -28,6 +28,12 @@ body {
   color: transparent;
 }
 
+.contact-text-gradient{
+  background: linear-gradient(90deg, rgba(233, 226, 184, 1) 0%, #86D2FC 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .bg-about-section{
   background-image: url('https://s3-alpha-sig.figma.com/img/a21e/7f4d/cfd5d2f7991a7034fa87f6097ac7b321?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mQk7Z81mMdhWOKIi~UBtQwp3u6PciJ7wE0YJgy86wTNv8BIq8RfXAcKwRcaJHz3g6YV21bO6kHFKVcUASxDhIbJYrui6jloyvxgByLniZXf5n93SRBevngHxPAcXB5Jf2cJ4JTGveKO5siIL4Cnb-iYUGnKW~DffQkmd9XbQY4xUlfXMIcSyNym8yqCQUwuyFctY-cWxmHoGb0PkboCUMqOZ5QjDZDuWa~Tca1byHYH07255DvByvwNKPHKRsa0T4Qkl5uO4I5~RHIVfdNbReDvS8R17kjV3aiq0jfg7lSqgGOi5iir~ETI3zWgR~d75h7sau~0J~rOtWXWn0Rg~4Q__');
   background-repeat: no-repeat;
