@@ -42,7 +42,7 @@ export default function WhatWeAreOffering() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-8 border-x-indigo-600 bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="p-8  border-white bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               <div className="flex items-center justify-center w-12 h-12 bg-gray-700 rounded-full mb-6 mx-auto group-hover:bg-gray-600 transition-all duration-300">
                 <ArrowUpRight className="text-gray-300 group-hover:text-white w-6 h-6" />

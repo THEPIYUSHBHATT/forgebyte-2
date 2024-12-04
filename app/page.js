@@ -35,32 +35,29 @@ export default function Home() {
 
 
       {/* -----------------hero component--------------------------- */}
-      <div className="text-center py-12 bg-white">
-        <div className="my-8 px-4 md:my-16 md:px-8">
+      <div className="text-center bg-white">
+        <div className="py-8 px-4 md:py-16 md:px-8 bg-hero-section rounded-br-[200px]">
           {/* Heading */}
-          <h1 className="text-black text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-10 font-sans leading-tight">
+          <h1 className="text-hero-text-gradient text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-10 font-sans leading-tight">
             We Don&apos;t Just Go Big <br className="hidden md:block" />
             - We Go Beyond
           </h1>
 
           {/* Description */}
-          <p className="text-black text-sm md:text-base mb-5 leading-relaxed">
+          <p className="text-hero-text-gradient text-sm md:text-base mb-5 leading-relaxed">
             Our journey from beginnings to breakthroughs has been fueled by innovation, dedication,
 
             <br className="hidden md:block" />
             and an unyielding commitment to excellence
           </p>
+          <div className="mb-5 my-20">
+            <Button className="mt-1" text="Contact Us" />
+            <button className="ml-2 py-2 px-4 bg-inherit text-white font-bold rounded inline-flex items-center">
+              Explore <FaArrowDown className="ml-1" />
+            </button>
+          </div>
         </div>
 
-
-
-        <div className="mb-5 my-20 ">
-          <Button className="mt-1" text="Contact Us" />
-
-          <button className="ml-2 py-2 px-4 bg-inherit text-black font-bold rounded inline-flex items-center">
-            Explore <FaArrowDown className="ml-1" />
-          </button>
-        </div>
 
         {/* images */}
         <div className="flex justify-center gap-5 mt-8 overflow-x-auto relative">
