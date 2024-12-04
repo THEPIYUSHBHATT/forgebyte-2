@@ -39,15 +39,16 @@ export default function Home() {
         <div className="my-8 px-4 md:my-16 md:px-8">
           {/* Heading */}
           <h1 className="text-black text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-10 font-sans leading-tight">
-            We Don't Just Go Big <br className="hidden md:block" />
+            We Don&apos;t Just Go Big <br className="hidden md:block" />
             - We Go Beyond
           </h1>
 
           {/* Description */}
           <p className="text-black text-sm md:text-base mb-5 leading-relaxed">
-            ForgeByte webflow template includes 10+ pages in total, with more than 40+
+            Our journey from beginnings to breakthroughs has been fueled by innovation, dedication,
+
             <br className="hidden md:block" />
-            sections and 1 home page, and amazing features.
+            and an unyielding commitment to excellence
           </p>
         </div>
 
