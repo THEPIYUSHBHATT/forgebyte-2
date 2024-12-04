@@ -39,8 +39,8 @@ export default function Home() {
         <div className="my-8 px-4 md:my-16 md:px-8">
           {/* Heading */}
           <h1 className="text-black text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-10 font-sans leading-tight">
-            Digital Marketing Agency <br className="hidden md:block" />
-            Template Design
+            We Don't Just Go Big <br className="hidden md:block" />
+            - We Go Beyond
           </h1>
 
           {/* Description */}

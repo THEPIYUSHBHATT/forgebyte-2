@@ -9,23 +9,23 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import icons 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [path, setPath] = useState('')
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setPath(window.location.pathname)
-    }
-  }, [])
+  // const [path, setPath] = useState('')
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     setPath(window.location.pathname)
+  //   }
+  // }, [])
   
   return (
-    <nav className={`flex items-center justify-between px-4 md:px-10 h-20 w-full ${path === '/' ? 'text-black border-b-[1px]':'bg-hero-section text-white'}`}>
+    <nav className="flex items-center justify-between px-4 md:px-10 h-32 w-full text-white bg-[#050414] ">
       {/* Logo */}
       <div className="flex items-center">
         <Image
-          src="/assets/logo.png"
+          src="/assets/Group 4.svg"
           alt="ForgeByte Logo"
           height={80} 
           width={150}
-          className="h-auto mr-3"
+          className="h-auto mr-3 bg-[#050414]"
         />
       </div>
 
@@ -63,7 +63,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-20 left-0 w-full bg-[#fff] text-black shadow-lg md:hidden">
+        <div className="absolute top-20 left-0 w-full bg-[#050414] text-white shadow-lg md:hidden">
           <ul className="flex flex-col items-center space-y-4 py-6 text-sm font-medium">
             <li>
               <Link href="#home" onClick={() => setIsMenuOpen(false)}>
