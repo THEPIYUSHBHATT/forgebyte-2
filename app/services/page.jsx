@@ -1,3 +1,4 @@
+import WhatWeAreOffering from '@/components/WhatWeAreOffering'
 import {Check, MoveRight, MoveUpRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -64,22 +65,9 @@ const page = () => {
       </div>
       <div className='pl-1 flex-col flex justify-center items-center pt-20 gap-y-20'>
         <Image src={'https://s3-alpha-sig.figma.com/img/3de2/afb3/df11736f8f11db260640ff44a978353f?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mbTogP8d9~qTdQy0tbPpEF3x3IZP5-gJpQDaR-TnqKsg~VK86XpLoAqJ7I9ce7pNh6CZMfIXFQjcuLAt0d5AsTspLW7~L-0dWkoCIlq2nV57jEQ8QW5ZSckvX2aXM2arAsUYnuKAwcsFkq0GPaJj-nEvDGMxJHEmVuFqlJ~aneKru8nPdcMQQ7srElO2siQYnUUETPu0u9IeBACb4U5Nz9OQFDivJMTbZSQSrc-Kd5Ud1Wzl0IRhUkIyL8LZJUzqr7bGVNGpvDlRIabnyIXqiZUEH4geQdGOzUEkmYmGW5Tq2SySckZfZc7bjI3cKMJhSZm1mqne1RT~NLCHdqb7Yg__'} alt='as' width={700} height={470} />
-        <div className='bg-hero-section relative rounded-l-[150px] h-[898px] w-full text-white flex justify-evenly flex-col items-center'>
-          <div className="bg-[#86d2fc33] h-[35%] absolute w-[20%] blur-[80px] -top-16 -right-16" />
-          <div className="bg-[#DB76AD33] h-[35%] absolute w-[20%] blur-[80px] -bottom-16 -left-16" />
-          <p className='font-sans'>SERVICES</p>
-          <h1 className='font-sans text-5xl'>What we are offering</h1>
-          <div className='grid grid-cols-2 grid-rows-2 gap-32'>
-            {data.map((item, index)=>(
-              <div key={index} className='w-[473px] h-[300px] border-2 rounded-2xl flex justify-evenly items-center flex-col px-8'>
-                <div className='bg-[#484852] w-[70px] h-[70px] rounded-full flex justify-center items-center'>
-                 <MoveUpRight size={20} />
-                </div>
-                <h2 className='text-2xl font-sans'>{item.title}</h2>
-                <p>{item.paragraph}</p>
-              </div>
-            ))}
-          </div>
+        <div className='bg-hero-section relative rounded-l-[150px] h-full w-full text-white flex justify-evenly flex-col items-center'>
+          
+          <WhatWeAreOffering />
         </div>
         <div className='font-sans w-full px-8'>
           <h1 className='text-3xl font-semibold'>We Create Next-big for You</h1>
