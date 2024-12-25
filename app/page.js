@@ -4,6 +4,7 @@ import Button from '../components/Button'
 import Image from 'next/image'
 import { FaArrowDown } from 'react-icons/fa'
 import { FaLaptop, FaListAlt, FaCog } from 'react-icons/fa'
+import { motion } from "motion/react"
 
 import WhatWeAreOffering from "@/components/WhatWeAreOffering";
 import LetsTalk from "@/components/LetsTalk";
@@ -38,10 +39,19 @@ export default function Home() {
       <div className="text-center bg-white">
         <div className="py-8 px-4 md:py-16 md:px-8 bg-hero-section rounded-br-[200px]">
           {/* Heading */}
-          <h1 className="text-hero-text-gradient text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-10 font-sans leading-tight">
+          <motion.h1
+          initial={{ scale: 0 }} 
+          animate={{ 
+            scale: 1 , 
+            transition: { duration: 2 }
+        
+           }
+           
+          }
+           className="text-hero-text-gradient text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-10 font-sans leading-tight">
             We Don&apos;t Just Go Big <br className="hidden md:block" />
             - We Go Beyond
-          </h1>
+          </motion.h1>
 
           {/* Description */}
           <p className="text-hero-text-gradient text-sm md:text-base mb-5 leading-relaxed">
@@ -52,8 +62,23 @@ export default function Home() {
           </p>
           <div className="mb-5 my-20">
             <Button className="mt-1" text="Contact Us" />
-            <button className="ml-2 py-2 px-4 bg-inherit text-white font-bold rounded inline-flex items-center">
-              Explore <FaArrowDown className="ml-1" />
+            <button className=" ml-2 py-2 px-4 bg-inherit text-white font-bold rounded inline-flex items-center">
+              Explore 
+              <motion.span
+                animate={{
+                  y: [0, -10, 0], // Keyframes: Start at 0, move up by -20px, then return to 0
+              }}
+              transition={{
+                  duration: 3, 
+                  repeat: Infinity, 
+                  repeatType: "loop", 
+                  ease: "easeInOut", 
+              }}
+              >
+
+              <FaArrowDown className="ml-1" />
+              </motion.span>
+
             </button>
           </div>
         </div>

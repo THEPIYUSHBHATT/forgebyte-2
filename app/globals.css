@@ -40,3 +40,10 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.smooth{
+  transition: all 1s ;
+}
+.smooth:hover{
+  transform: scale(1.2);
+}

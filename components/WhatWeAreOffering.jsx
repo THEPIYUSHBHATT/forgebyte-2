@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "motion/react"
 import { ArrowUpRight } from "lucide-react"; // Example for SVG icons; you can replace with your own icons.
 
 const services = [
@@ -40,16 +40,24 @@ export default function WhatWeAreOffering() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
               className="p-8  border-white bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-            >
+              initial={{ opacity: 0, y: 50 }} // Start below the viewport
+              whileInView={{ opacity: 1, y: 0 }} // Animate to visible position
+              viewport={{ amount: 0.8, once: true }} // Trigger animation once when 80% of the card is in view
+              transition={{
+                  duration: 0.8,
+                  ease: "linear",
+                  delay: index * 0.2, // Add a delay for each card based on its index
+              }}
+           >
               <div className="flex items-center justify-center w-12 h-12 bg-gray-700 rounded-full mb-6 mx-auto group-hover:bg-gray-600 transition-all duration-300">
                 <ArrowUpRight className="text-gray-300 group-hover:text-white w-6 h-6" />
               </div>
               <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
               <p className="text-gray-400">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
